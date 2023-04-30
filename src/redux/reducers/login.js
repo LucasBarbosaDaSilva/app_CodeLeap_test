@@ -1,14 +1,14 @@
 import { ADD_NAME } from '../actions';
 
 const INITIAL_STATE = {
-  name: '',
+  username: '',
 };
 const loginReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
   case ADD_NAME:
     return {
       ...state,
-      email: action.payload.name,
+      username: action.payload,
     };
   default:
     return state;

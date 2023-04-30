@@ -7,7 +7,7 @@ import  {addName}  from '../redux/actions';
 import {  Form, Button } from 'react-bootstrap';
 
 function Login() {
-  const [name, setName] = useState('');
+  const [username, setName] = useState('');
   const history = useHistory();
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   const dispatch = useDispatch();
@@ -23,20 +23,21 @@ function Login() {
   };
 
   const handleLogin = () => {
-    dispatch(addName(name));
+    console.log(username);
+    dispatch(addName(username));
     history.push('/post');
   };
 
   return (
     <div className="d-flex justify-content-center align-items-center h-100">
     <div className="login-container p-4">
-      <h2 className="text-center mb-4 title">Welcome to CodeLeap network!</h2>
+      <h2 className="text-center mb-4">Welcome to CodeLeap network!</h2>
       <Form>
         <Form.Group controlId="formName">
           <Form.Label>Please enter your username</Form.Label>
           <Form.Control
             type="text"
-            value={name}
+            value={username}
             onChange={handleNameChange}
             placeholder="Enter your name"
           />

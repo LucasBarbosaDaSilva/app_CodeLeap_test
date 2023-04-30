@@ -14,7 +14,7 @@ ReactDOM
 
     <BrowserRouter>
       <Provider store={ store }>
-        <App className="bg-secondary"/>
+        <App />
       </Provider>
     </BrowserRouter>,
 
