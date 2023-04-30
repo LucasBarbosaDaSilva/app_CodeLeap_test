@@ -23,7 +23,6 @@ function Login() {
   };
 
   const handleLogin = () => {
-    console.log(username);
     dispatch(addName(username));
     history.push('/post');
   };

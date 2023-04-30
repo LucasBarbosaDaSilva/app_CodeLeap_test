@@ -55,7 +55,6 @@ const FormComponent = ({  created_datetime}) => {
     <Container className="container">
       <Form onSubmit={handleSubmit}>
         <h3>What's on your mind?</h3>
-        <button onClick={() => console.log(state)} />
         <Form.Group controlId="title">
           <Form.Label>Title</Form.Label>
           <Form.Control
